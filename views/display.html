@@ -1,0 +1,49 @@
+ <div class="row">
+        <div class="col-sm-9">
+            <md-grid-list md-cols="3" md-row-height="175px" ...>
+                <md-grid-tile style="background-color:#f5f000"><img  ng-src="../img/trees/1.jpg" style="height: 80px" /></md-grid-tile>
+                <md-grid-tile style="background-color:#00a67c"></md-grid-tile>
+                <md-grid-tile style="background-color: #ff8a80"></md-grid-tile>
+                <md-grid-tile style="background-color: #e51e6b"></md-grid-tile>
+                <md-grid-tile style="background-color: purple"></md-grid-tile>
+                <md-grid-tile style="background-color: lime"></md-grid-tile>
+                <md-grid-tile style="background-color: #a6e1ec"></md-grid-tile>
+                <md-grid-tile style="background-color: #66512c"></md-grid-tile>
+                <md-grid-tile style="background-color: #b9f6ca"></md-grid-tile>
+            </md-grid-list>
+        </div>
+        <!--<div class="col-sm-6">-->
+            <!--<div class="col-sm-6">-->
+                <!--<ng-image-gallery images="images"  methods="methods" thumbnails="thumbnails" thumb-size="thumbSize" inline="true" bubbles="bubbles" bubble-size="bubbleSize" img-bubbles="imgBubbles" bg-close="bgClose" piracy="true" on-open="opened();" on-close="closed();" on-delete="delete(img, cb)" bg-close="false"></ng-image-gallery>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div class="col-sm-3">
+            <div class="row">
+                <div class="col-sm-11" ng-controller="treeController">
+                    <ng-image-gallery images="images"  methods="methods" thumbnails="thumbnails" thumb-size="thumbSize" inline="true" bubbles="bubbles" bubble-size="bubbleSize" img-bubbles="imgBubbles" bg-close="bgClose" piracy="true" on-open="opened();" on-close="closed();" on-delete="delete(img, cb)" bg-close="false"></ng-image-gallery>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-11" ng-controller="shrubController">
+                    <ng-image-gallery images="images"  methods="methods" thumbnails="thumbnails" thumb-size="thumbSize" inline="true" bubbles="bubbles" bubble-size="bubbleSize" img-bubbles="imgBubbles" bg-close="bgClose" piracy="true" on-open="opened();" on-close="closed();" on-delete="delete(img, cb)" bg-close="false"></ng-image-gallery>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-11" ng-controller="perennialController">
+                    <ng-image-gallery images="images"  methods="methods" thumbnails="thumbnails" thumb-size="thumbSize" inline="true" bubbles="bubbles" bubble-size="bubbleSize" img-bubbles="imgBubbles" bg-close="bgClose" piracy="true" on-open="opened();" on-close="closed();" on-delete="delete(img, cb)" bg-close="false"></ng-image-gallery>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="row" ng-controller="recommendController">
+                <div class="card col-sm-6">
+                    <label for="recommend1">Recommend</label>
+                    <img id ="recommend1" ng-src="../img/trees/1.jpg" style="height: 80px" />
+                </div>
+                <div class="card col-sm-5">
+                    <label for="recommend2">Recommend</label>
+                    <img id ="recommend2" ng-src="../img/trees/1.jpg" style="height: 80px" />
+                </div>
+            </div>
+        </div>
+ </div>
