@@ -1,16 +1,23 @@
+
  <div class="row">
         <div class="col-sm-9">
-            <md-grid-list md-cols="3" md-row-height="175px" ...>
-                <md-grid-tile style="background-color:#f5f000"><img  ng-src="../img/trees/1.jpg" style="height: 80px" /></md-grid-tile>
-                <md-grid-tile style="background-color:#00a67c"></md-grid-tile>
-                <md-grid-tile style="background-color: #ff8a80"></md-grid-tile>
-                <md-grid-tile style="background-color: #e51e6b"></md-grid-tile>
-                <md-grid-tile style="background-color: purple"></md-grid-tile>
-                <md-grid-tile style="background-color: lime"></md-grid-tile>
-                <md-grid-tile style="background-color: #a6e1ec"></md-grid-tile>
-                <md-grid-tile style="background-color: #66512c"></md-grid-tile>
-                <md-grid-tile style="background-color: #b9f6ca"></md-grid-tile>
-            </md-grid-list>
+            <!--<md-grid-list md-cols="3" md-row-height="175px" ...>-->
+            <!--    <md-grid-tile style="background-color:#f5f000"><img  ng-src="../img/trees/1.jpg" style="height: 80px" /></md-grid-tile>-->
+            <!--    <md-grid-tile style="background-color:#00a67c"></md-grid-tile>-->
+            <!--    <md-grid-tile style="background-color: #ff8a80"></md-grid-tile>-->
+            <!--    <md-grid-tile style="background-color: #e51e6b"></md-grid-tile>-->
+            <!--    <md-grid-tile style="background-color: purple"></md-grid-tile>-->
+            <!--    <md-grid-tile style="background-color: lime"></md-grid-tile>-->
+            <!--    <md-grid-tile style="background-color: #a6e1ec"></md-grid-tile>-->
+            <!--    <md-grid-tile style="background-color: #66512c"></md-grid-tile>-->
+            <!--    <md-grid-tile style="background-color: #b9f6ca"></md-grid-tile>-->
+            <!--</md-grid-list>-->
+            <div id="container" style="background-color:#e6ffc6"></div>
+            
+            
+            
+            
+            
         </div>
         <!--<div class="col-sm-6">-->
             <!--<div class="col-sm-6">-->
@@ -47,3 +54,97 @@
             </div>
         </div>
  </div>
+ 
+ <script>
+    var img_addr = ['http://www.freeiconspng.com/uploads/no-image-icon-13.png', "http://images.all-free-download.com/images/graphiclarge/harry_potter_icon_6825007.jpg", "https://image.flaticon.com/teams/slug/freepik.jpg"];
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    function drawImage(imageObj) {
+        var stage = new Konva.Stage({
+            container: 'container',
+            width: width,
+            height: height
+        });
+        var layer = new Konva.Layer();
+        // darth vader
+        var darthVaderImg = new Konva.Image({
+            image: imageObj,
+            x: stage.getWidth() / 2 - 200 / 2,
+            y: stage.getHeight() / 2 - 137 / 2,
+            width: 200,
+            height: 137,
+            draggable: true
+        });
+        // add cursor styling
+        darthVaderImg.on('mouseover', function() {
+            document.body.style.cursor = 'pointer';
+        });
+        darthVaderImg.on('mouseout', function() {
+            document.body.style.cursor = 'default';
+        });
+        layer.add(darthVaderImg);
+        stage.add(layer);
+    }
+    
+    var stage = new Konva.Stage({
+        container: 'container',
+        width: width,
+        height: height
+    });
+
+    
+    
+    
+    
+    var layer = new Konva.Layer();
+    var colors = ["red", "orange", "yellow", "green", "blue", "purple"];
+    for(var i = 0; i < 6; i++) {
+        var box = new Konva.Rect({
+            x: i * 30 + 50,
+            y: i * 18 + 40,
+            fill: colors[i],
+            stroke: "black",
+            strokeWidth: 4,
+            draggable: true,
+            width: 100,
+            height: 50
+        });
+        box.on("dragstart", function() {
+            this.moveToTop();
+            layer.draw();
+        });
+        box.on("dragmove", function() {
+            document.body.style.cursor = "pointer";
+        });
+        /*
+           * dblclick to remove box for desktop app
+           * and dbltap to remove box for mobile app
+           */
+        box.on("dblclick dbltap", function() {
+            this.destroy();
+            layer.draw();
+        });
+        box.on("mouseover", function() {
+            document.body.style.cursor = "pointer";
+        });
+        box.on("mouseout", function() {
+            document.body.style.cursor = "default";
+        });
+        layer.add(box);
+    }
+    // add the layer to the stage
+    stage.add(layer);
+
+    
+    //     var imageObj = new Image();
+    //     imageObj.onload = function() {
+    //         drawImage(this);
+    //     };
+    //     //Tree Image: https://openclipart.org/search/?query=tree&page=11
+    //     imageObj.src = img_addr[0];
+    
+    
+    
+    
+   
+</script>

@@ -1,8 +1,10 @@
 <div ng-controller="mainController">
     <div backstretch backstretch-images="images" class="fullscreen">
             <div class="row">
-                <div class="card-header col-12">
-                    <div class="col-sm-11">&nbsp;Welcome!</div>
+                <div class="container">
+                  <div class="page-header">
+                    <h1>The Garden</h1>      
+                  </div>
                 </div>
             </div>
             <div  class="md-padding col-md-8 col-md-offset-2" ng-cloak layout="column">
@@ -13,7 +15,7 @@
                             <span class="md-headline">Preferences</span>
                             <span class="md-subhead">Choose Conditions</span>
                         </md-card-title-text>
-                    </md-card-title>
+                    </md-cards-title>
 
                     <md-card-content>
                         <div layout="row" layout-align="space-between center">
@@ -28,26 +30,7 @@
                             <a ui-sref="display"><md-button class="md-raised md-primary">submit</md-button></a>
                         </section>
 
-                        <!--<div layout="row" layout-align="space-between center">-->
-                            <!--<span>What armor do you wear?</span>-->
-                            <!--<md-select ng-model="armor" placeholder="Armor" class="md-no-underline" required md-no-asterisk="false">-->
-                                <!--<md-option value="cloth">Cloth</md-option>-->
-                                <!--<md-option value="leather">Leather</md-option>-->
-                                <!--<md-option value="chain">Chainmail</md-option>-->
-                                <!--<md-option value="plate">Plate</md-option>-->
-                            <!--</md-select>-->
-                        <!--</div>-->
-
-                        <!--<div layout="row" layout-align="space-between center">-->
-                            <!--<span>How do you refresh your magic?</span>-->
-                            <!--<md-select ng-model="drink" placeholder="Drink" class="md-no-underline">-->
-                                <!--<md-option value="water">Water</md-option>-->
-                                <!--<md-option value="juice">Juice</md-option>-->
-                                <!--<md-option value="milk">Milk</md-option>-->
-                                <!--<md-option value="wine">Wine</md-option>-->
-                                <!--<md-option value="mead">Mead</md-option>-->
-                            <!--</md-select>-->
-                        <!--</div>-->
+                        
                     </md-card-content>
                 </md-card>
 
